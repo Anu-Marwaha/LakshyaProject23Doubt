@@ -3,7 +3,7 @@ class Mark1 {
       var options = {
           isStatic: true
       }
-      this.body = Bodies.rectangle(x,y,140,20,options);
+      this.body = Bodies.rectangle(x,y,width,height,options);
       this.width = width;
       this.height = height;
       World.add(world, this.body);

@@ -5,10 +5,10 @@ class Supply{
             isStatic:true
         }
 
-        this.body=Bodies.circle(width/2 , 200 , 5 , options);
+        this.body=Bodies.circle(x,y,r/2 , options);
 	    //this.body.scale=0.2;
-        this.x=x;
-        this.y=y;
+       // this.x=x;
+        //this.y=y;
         this.r=r;
         this.image = loadImage("package.png");
         World.add(world, this.body);
@@ -17,8 +17,10 @@ class Supply{
         var supplyPos=this.body.position;
         push();
         translate(supplyPos.x,supplyPos.y);
+        ellipseMode(CENTER);
+      //  ellipse(0,0,this.r,this.r);
         imageMode(CENTER);
-        image(this.image, 0, 0, this.r);
+        image(this.image, 0, 0, this.r,this.r);
         pop();
     }
 };
